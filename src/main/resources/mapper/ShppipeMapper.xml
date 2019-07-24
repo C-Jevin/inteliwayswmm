@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.swmm.dao.ShppipeMapper">
+  <resultMap id="BaseResultMap" type="com.swmm.model.Shppipe">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="systemType" jdbcType="VARCHAR" property="systemtype" />
+    <result column="linkID" jdbcType="VARCHAR" property="linkid" />
+    <result column="length" jdbcType="DECIMAL" property="length" />
+    <result column="geoType" jdbcType="VARCHAR" property="geotype" />
+    <result column="geo_1" jdbcType="DECIMAL" property="geo1" />
+    <result column="geo_2" jdbcType="DECIMAL" property="geo2" />
+    <result column="geo_3" jdbcType="DECIMAL" property="geo3" />
+    <result column="geo_4" jdbcType="DECIMAL" property="geo4" />
+    <result column="maxDepth" jdbcType="DECIMAL" property="maxdepth" />
+    <result column="usNodeID" jdbcType="VARCHAR" property="usnodeid" />
+    <result column="dsNodeID" jdbcType="VARCHAR" property="dsnodeid" />
+    <result column="roughLink" jdbcType="DECIMAL" property="roughlink" />
+    <result column="usNodeEle" jdbcType="DECIMAL" property="usnodeele" />
+    <result column="dsNodeEle" jdbcType="DECIMAL" property="dsnodeele" />
+    <result column="inEle" jdbcType="DECIMAL" property="inele" />
+    <result column="outEle" jdbcType="DECIMAL" property="outele" />
+    <result column="linkType" jdbcType="VARCHAR" property="linktype" />
+    <result column="entryLossCoe" jdbcType="DECIMAL" property="entrylosscoe" />
+    <result column="exitLossCoe" jdbcType="DECIMAL" property="exitlosscoe" />
+    <result column="avgLossCoe" jdbcType="DECIMAL" property="avglosscoe" />
+    <result column="seepLossRate" jdbcType="DECIMAL" property="seeplossrate" />
+    <result column="flapGate" jdbcType="VARCHAR" property="flapgate" />
+    <result column="userText1" jdbcType="VARCHAR" property="usertext1" />
+    <result column="userText2" jdbcType="VARCHAR" property="usertext2" />
+    <result column="userText3" jdbcType="VARCHAR" property="usertext3" />
+    <result column="userNum1" jdbcType="DECIMAL" property="usernum1" />
+    <result column="userNum2" jdbcType="DECIMAL" property="usernum2" />
+    <result column="userNum3" jdbcType="DECIMAL" property="usernum3" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.swmm.dao.ShpzhamenMapper">
+  <resultMap id="BaseResultMap" type="com.swmm.model.Shpzhamen">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="gateID" jdbcType="VARCHAR" property="gateid" />
+    <result column="linkType" jdbcType="VARCHAR" property="linktype" />
+    <result column="usNodeID" jdbcType="VARCHAR" property="usnodeid" />
+    <result column="dsNodeID" jdbcType="VARCHAR" property="dsnodeid" />
+    <result column="bottomEle" jdbcType="DECIMAL" property="bottomele" />
+    <result column="height" jdbcType="DECIMAL" property="height" />
+    <result column="width" jdbcType="DECIMAL" property="width" />
+  </resultMap>
+</mapper>

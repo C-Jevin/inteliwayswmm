@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.swmm.dao.ShpxiadianmianMapper">
+  <resultMap id="BaseResultMap" type="com.swmm.model.Shpxiadianmian">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="green" jdbcType="DECIMAL" property="green" />
+    <result column="road" jdbcType="DECIMAL" property="road" />
+    <result column="water" jdbcType="DECIMAL" property="water" />
+    <result column="buildSite" jdbcType="DECIMAL" property="buildsite" />
+    <result column="roof" jdbcType="DECIMAL" property="roof" />
+    <result column="yard" jdbcType="DECIMAL" property="yard" />
+    <result column="farm" jdbcType="DECIMAL" property="farm" />
+    <result column="stadium" jdbcType="DECIMAL" property="stadium" />
+    <result column="forest" jdbcType="DECIMAL" property="forest" />
+  </resultMap>
+</mapper>

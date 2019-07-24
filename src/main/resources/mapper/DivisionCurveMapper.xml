@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.swmm.dao.DivisioncurveMapper">
+  <resultMap id="BaseResultMap" type="com.swmm.model.Divisioncurve">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="inflow" jdbcType="DECIMAL" property="inflow" />
+    <result column="outflow" jdbcType="DECIMAL" property="outflow" />
+  </resultMap>
+</mapper>

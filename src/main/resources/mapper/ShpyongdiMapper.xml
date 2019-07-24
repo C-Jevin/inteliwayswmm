@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.swmm.dao.ShpyongdiMapper">
+  <resultMap id="BaseResultMap" type="com.swmm.model.Shpyongdi">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="NameCN" jdbcType="VARCHAR" property="namecn" />
+    <result column="NameEN" jdbcType="VARCHAR" property="nameen" />
+    <result column="Household" jdbcType="DECIMAL" property="household" />
+    <result column="Popu" jdbcType="DECIMAL" property="popu" />
+    <result column="TypeCN" jdbcType="VARCHAR" property="typecn" />
+    <result column="TypeEN" jdbcType="VARCHAR" property="typeen" />
+  </resultMap>
+</mapper>

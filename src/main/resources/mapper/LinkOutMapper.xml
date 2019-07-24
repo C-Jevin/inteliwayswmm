@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.swmm.dao.LinkoutMapper">
+  <resultMap id="BaseResultMap" type="com.swmm.model.Linkout">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="uid" jdbcType="VARCHAR" property="uid" />
+    <id column="link" jdbcType="VARCHAR" property="link" />
+    <id column="dt" jdbcType="TIMESTAMP" property="dt" />
+    <id column="pollutant" jdbcType="VARCHAR" property="pollutant" />
+    <result column="depth" jdbcType="DECIMAL" property="depth" />
+    <result column="flow" jdbcType="DECIMAL" property="flow" />
+    <result column="velocity" jdbcType="DECIMAL" property="velocity" />
+    <result column="volume" jdbcType="DECIMAL" property="volume" />
+    <result column="capacity" jdbcType="DECIMAL" property="capacity" />
+    <result column="qual" jdbcType="DECIMAL" property="qual" />
+  </resultMap>
+</mapper>

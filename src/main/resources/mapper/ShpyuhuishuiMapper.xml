@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.swmm.dao.ShpyuhuishuiMapper">
+  <resultMap id="BaseResultMap" type="com.swmm.model.Shpyuhuishui">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="area" jdbcType="DECIMAL" property="area" />
+    <result column="catID" jdbcType="VARCHAR" property="catid" />
+    <result column="rainGate" jdbcType="VARCHAR" property="raingate" />
+    <result column="outlet" jdbcType="VARCHAR" property="outlet" />
+    <result column="width" jdbcType="DECIMAL" property="width" />
+    <result column="imperv" jdbcType="DECIMAL" property="imperv" />
+    <result column="slope" jdbcType="DECIMAL" property="slope" />
+    <result column="nImperv" jdbcType="DECIMAL" property="nimperv" />
+    <result column="nPerv" jdbcType="DECIMAL" property="nperv" />
+    <result column="desImoerv" jdbcType="DECIMAL" property="desimoerv" />
+    <result column="desPerv" jdbcType="DECIMAL" property="desperv" />
+    <result column="zeroImperv" jdbcType="DECIMAL" property="zeroimperv" />
+    <result column="subareaRout" jdbcType="INTEGER" property="subarearout" />
+    <result column="percentRout" jdbcType="DECIMAL" property="percentrout" />
+    <result column="inflitration" jdbcType="VARCHAR" property="inflitration" />
+    <result column="groundwaterFlag" jdbcType="INTEGER" property="groundwaterflag" />
+    <result column="snowPack" jdbcType="VARCHAR" property="snowpack" />
+    <result column="landuse_1" jdbcType="DECIMAL" property="landuse1" />
+    <result column="landuse_2" jdbcType="DECIMAL" property="landuse2" />
+    <result column="landuse_3" jdbcType="DECIMAL" property="landuse3" />
+    <result column="landuse_4" jdbcType="DECIMAL" property="landuse4" />
+  </resultMap>
+</mapper>

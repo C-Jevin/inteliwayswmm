@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.swmm.dao.ShppumpMapper">
+  <resultMap id="BaseResultMap" type="com.swmm.model.Shppump">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="pumpID" jdbcType="VARCHAR" property="pumpid" />
+    <result column="usNodeID" jdbcType="VARCHAR" property="usnodeid" />
+    <result column="dsNodeID" jdbcType="VARCHAR" property="dsnodeid" />
+    <result column="flow" jdbcType="DECIMAL" property="flow" />
+    <result column="swithOn" jdbcType="DECIMAL" property="swithon" />
+    <result column="swithOff" jdbcType="DECIMAL" property="swithoff" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.swmm.dao.SubcatchoutMapper">
+  <resultMap id="BaseResultMap" type="com.swmm.model.Subcatchout">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="uid" jdbcType="VARCHAR" property="uid" />
+    <id column="subcatch" jdbcType="VARCHAR" property="subcatch" />
+    <id column="dt" jdbcType="TIMESTAMP" property="dt" />
+    <id column="pollutant" jdbcType="VARCHAR" property="pollutant" />
+    <result column="rainfall" jdbcType="DECIMAL" property="rainfall" />
+    <result column="snowdepth" jdbcType="DECIMAL" property="snowdepth" />
+    <result column="evap" jdbcType="DECIMAL" property="evap" />
+    <result column="infil" jdbcType="DECIMAL" property="infil" />
+    <result column="gw_flow" jdbcType="DECIMAL" property="gwFlow" />
+    <result column="gw_elev" jdbcType="DECIMAL" property="gwElev" />
+    <result column="soil_moist" jdbcType="DECIMAL" property="soilMoist" />
+    <result column="runoff" jdbcType="DECIMAL" property="runoff" />
+    <result column="washoff" jdbcType="VARCHAR" property="washoff" />
+    <result column="qual" jdbcType="DECIMAL" property="qual" />
+  </resultMap>
+</mapper>

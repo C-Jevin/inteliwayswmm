@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.swmm.dao.OptionMapper">
+  <resultMap id="BaseResultMap" type="com.swmm.model.Option">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="proModel" jdbcType="INTEGER" property="promodel" />
+    <result column="routingModel" jdbcType="INTEGER" property="routingmodel" />
+    <result column="infilMode" jdbcType="INTEGER" property="infilmode" />
+    <result column="pondingFlag" jdbcType="INTEGER" property="pondingflag" />
+    <result column="conActReport" jdbcType="INTEGER" property="conactreport" />
+    <result column="sumInpReport" jdbcType="INTEGER" property="suminpreport" />
+    <result column="minConSlope" jdbcType="DECIMAL" property="minconslope" />
+    <result column="startAanTime" jdbcType="TIMESTAMP" property="startaantime" />
+    <result column="startRepTime" jdbcType="TIMESTAMP" property="startreptime" />
+    <result column="ednAnaTime" jdbcType="TIMESTAMP" property="ednanatime" />
+    <result column="startSweepDate" jdbcType="DATE" property="startsweepdate" />
+    <result column="endSweepDate" jdbcType="DATE" property="endsweepdate" />
+    <result column="antDryDays" jdbcType="DECIMAL" property="antdrydays" />
+    <result column="reportStep" jdbcType="TIME" property="reportstep" />
+    <result column="dryRunoffStep" jdbcType="TIME" property="dryrunoffstep" />
+    <result column="wetRunoffStep" jdbcType="TIME" property="wetrunoffstep" />
+    <result column="routingStep" jdbcType="TIME" property="routingstep" />
+    <result column="skipSteadyFlow" jdbcType="INTEGER" property="skipsteadyflow" />
+    <result column="sysFlowTol" jdbcType="INTEGER" property="sysflowtol" />
+    <result column="latFlowTol" jdbcType="INTEGER" property="latflowtol" />
+    <result column="interTerm" jdbcType="INTEGER" property="interterm" />
+    <result column="norFlowCrit" jdbcType="INTEGER" property="norflowcrit" />
+    <result column="forceConEqu" jdbcType="INTEGER" property="forceconequ" />
+    <result column="varTimeStepFlag" jdbcType="INTEGER" property="vartimestepflag" />
+    <result column="varTimeStepAdj" jdbcType="INTEGER" property="vartimestepadj" />
+    <result column="minVarTimeStep" jdbcType="DECIMAL" property="minvartimestep" />
+    <result column="conLengthTimeStep" jdbcType="DECIMAL" property="conlengthtimestep" />
+    <result column="minNodeSurArea" jdbcType="DECIMAL" property="minnodesurarea" />
+    <result column="maxTri" jdbcType="INTEGER" property="maxtri" />
+    <result column="headConToler" jdbcType="DECIMAL" property="headcontoler" />
+    <result column="numThreads" jdbcType="INTEGER" property="numthreads" />
+  </resultMap>
+</mapper>

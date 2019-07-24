@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.swmm.dao.NodeinflowMapper">
+  <resultMap id="BaseResultMap" type="com.swmm.model.Nodeinflow">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="extFlieFlag" jdbcType="INTEGER" property="extflieflag" />
+    <result column="date" jdbcType="DATE" property="date" />
+    <result column="time" jdbcType="TIME" property="time" />
+    <result column="value" jdbcType="DECIMAL" property="value" />
+  </resultMap>
+</mapper>

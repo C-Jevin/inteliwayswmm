@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.swmm.dao.NodeoutMapper">
+  <resultMap id="BaseResultMap" type="com.swmm.model.Nodeout">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="uid" jdbcType="VARCHAR" property="uid" />
+    <id column="node" jdbcType="VARCHAR" property="node" />
+    <id column="dt" jdbcType="TIMESTAMP" property="dt" />
+    <id column="pollutant" jdbcType="VARCHAR" property="pollutant" />
+    <result column="depth" jdbcType="DECIMAL" property="depth" />
+    <result column="head" jdbcType="DECIMAL" property="head" />
+    <result column="volume" jdbcType="DECIMAL" property="volume" />
+    <result column="latflow" jdbcType="DECIMAL" property="latflow" />
+    <result column="inflow" jdbcType="DECIMAL" property="inflow" />
+    <result column="overflow" jdbcType="DECIMAL" property="overflow" />
+    <result column="qual" jdbcType="DECIMAL" property="qual" />
+  </resultMap>
+</mapper>
