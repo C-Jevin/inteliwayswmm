@@ -14,13 +14,14 @@ import java.util.List;
 /**
 * Created by CodeGenerator on 2019/07/20.
 */
+
 @RestController
 @RequestMapping("/controllcurve")
 public class ControllcurveController {
     @Resource
     private ControllcurveService controllcurveService;
 
-    @PostMapping
+   /* @PostMapping
     public Result add(@RequestBody Controllcurve controllcurve) {
         controllcurveService.save(controllcurve);
         return ResultGenerator.genSuccessResult();
@@ -50,5 +51,5 @@ public class ControllcurveController {
         List<Controllcurve> list = controllcurveService.findAll();
         PageInfo pageInfo = new PageInfo(list);
         return ResultGenerator.genSuccessResult(pageInfo);
-    }
+    }*/
 }

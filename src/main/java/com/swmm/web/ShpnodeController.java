@@ -20,7 +20,7 @@ public class ShpnodeController {
     @Resource
     private ShpnodeService shpnodeService;
 
-    @PostMapping
+   /* @PostMapping
     public Result add(@RequestBody Shpnode shpnode) {
         shpnodeService.save(shpnode);
         return ResultGenerator.genSuccessResult();
@@ -50,5 +50,5 @@ public class ShpnodeController {
         List<Shpnode> list = shpnodeService.findAll();
         PageInfo pageInfo = new PageInfo(list);
         return ResultGenerator.genSuccessResult(pageInfo);
-    }
+    }*/
 }

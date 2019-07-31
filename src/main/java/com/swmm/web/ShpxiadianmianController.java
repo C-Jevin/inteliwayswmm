@@ -20,7 +20,7 @@ public class ShpxiadianmianController {
     @Resource
     private ShpxiadianmianService shpxiadianmianService;
 
-    @PostMapping
+   /* @PostMapping
     public Result add(@RequestBody Shpxiadianmian shpxiadianmian) {
         shpxiadianmianService.save(shpxiadianmian);
         return ResultGenerator.genSuccessResult();
@@ -50,5 +50,5 @@ public class ShpxiadianmianController {
         List<Shpxiadianmian> list = shpxiadianmianService.findAll();
         PageInfo pageInfo = new PageInfo(list);
         return ResultGenerator.genSuccessResult(pageInfo);
-    }
+    }*/
 }

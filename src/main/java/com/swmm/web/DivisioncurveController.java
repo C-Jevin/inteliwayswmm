@@ -20,7 +20,7 @@ public class DivisioncurveController {
     @Resource
     private DivisioncurveService divisioncurveService;
 
-    @PostMapping
+    /*@PostMapping
     public Result add(@RequestBody Divisioncurve divisioncurve) {
         divisioncurveService.save(divisioncurve);
         return ResultGenerator.genSuccessResult();
@@ -50,5 +50,5 @@ public class DivisioncurveController {
         List<Divisioncurve> list = divisioncurveService.findAll();
         PageInfo pageInfo = new PageInfo(list);
         return ResultGenerator.genSuccessResult(pageInfo);
-    }
+    }*/
 }

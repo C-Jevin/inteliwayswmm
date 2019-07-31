@@ -20,7 +20,7 @@ public class PumpcurveController {
     @Resource
     private PumpcurveService pumpcurveService;
 
-    @PostMapping
+   /* @PostMapping
     public Result add(@RequestBody Pumpcurve pumpcurve) {
         pumpcurveService.save(pumpcurve);
         return ResultGenerator.genSuccessResult();
@@ -50,5 +50,5 @@ public class PumpcurveController {
         List<Pumpcurve> list = pumpcurveService.findAll();
         PageInfo pageInfo = new PageInfo(list);
         return ResultGenerator.genSuccessResult(pageInfo);
-    }
+    }*/
 }

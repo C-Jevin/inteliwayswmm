@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.swmm.dao.SubcatchoutMapper">
-  <resultMap id="BaseResultMap" type="com.swmm.model.Subcatchout">
+<mapper namespace="com.swmm.dao.SubcatchouttMapper">
+  <resultMap id="BaseResultMap" type="com.swmm.model.Subcatchoutt">
     <!--
       WARNING - @mbg.generated
     -->
@@ -17,7 +17,7 @@
     <result column="gw_elev" jdbcType="DECIMAL" property="gwElev" />
     <result column="soil_moist" jdbcType="DECIMAL" property="soilMoist" />
     <result column="runoff" jdbcType="DECIMAL" property="runoff" />
-    <result column="washoff" jdbcType="VARCHAR" property="washoff" />
+    <result column="washoff" jdbcType="DECIMAL" property="washoff" />
     <result column="qual" jdbcType="DECIMAL" property="qual" />
   </resultMap>
 </mapper>

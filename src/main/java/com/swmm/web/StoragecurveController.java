@@ -20,7 +20,7 @@ public class StoragecurveController {
     @Resource
     private StoragecurveService storagecurveService;
 
-    @PostMapping
+    /*@PostMapping
     public Result add(@RequestBody Storagecurve storagecurve) {
         storagecurveService.save(storagecurve);
         return ResultGenerator.genSuccessResult();
@@ -50,5 +50,5 @@ public class StoragecurveController {
         List<Storagecurve> list = storagecurveService.findAll();
         PageInfo pageInfo = new PageInfo(list);
         return ResultGenerator.genSuccessResult(pageInfo);
-    }
+    }*/
 }

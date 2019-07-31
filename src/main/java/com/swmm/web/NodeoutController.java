@@ -20,7 +20,7 @@ public class NodeoutController {
     @Resource
     private NodeoutService nodeoutService;
 
-    @PostMapping
+    /*@PostMapping
     public Result add(@RequestBody Nodeout nodeout) {
         nodeoutService.save(nodeout);
         return ResultGenerator.genSuccessResult();
@@ -50,5 +50,5 @@ public class NodeoutController {
         List<Nodeout> list = nodeoutService.findAll();
         PageInfo pageInfo = new PageInfo(list);
         return ResultGenerator.genSuccessResult(pageInfo);
-    }
+    }*/
 }

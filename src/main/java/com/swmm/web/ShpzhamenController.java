@@ -20,7 +20,7 @@ public class ShpzhamenController {
     @Resource
     private ShpzhamenService shpzhamenService;
 
-    @PostMapping
+    /*@PostMapping
     public Result add(@RequestBody Shpzhamen shpzhamen) {
         shpzhamenService.save(shpzhamen);
         return ResultGenerator.genSuccessResult();
@@ -50,5 +50,5 @@ public class ShpzhamenController {
         List<Shpzhamen> list = shpzhamenService.findAll();
         PageInfo pageInfo = new PageInfo(list);
         return ResultGenerator.genSuccessResult(pageInfo);
-    }
+    }*/
 }

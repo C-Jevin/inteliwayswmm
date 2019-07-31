@@ -20,7 +20,7 @@ public class ShppumpController {
     @Resource
     private ShppumpService shppumpService;
 
-    @PostMapping
+    /*@PostMapping
     public Result add(@RequestBody Shppump shppump) {
         shppumpService.save(shppump);
         return ResultGenerator.genSuccessResult();
@@ -50,5 +50,5 @@ public class ShppumpController {
         List<Shppump> list = shppumpService.findAll();
         PageInfo pageInfo = new PageInfo(list);
         return ResultGenerator.genSuccessResult(pageInfo);
-    }
+    }*/
 }

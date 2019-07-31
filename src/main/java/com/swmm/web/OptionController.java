@@ -20,7 +20,7 @@ public class OptionController {
     @Resource
     private OptionService optionService;
 
-    @PostMapping
+    /*@PostMapping
     public Result add(@RequestBody Option option) {
         optionService.save(option);
         return ResultGenerator.genSuccessResult();
@@ -50,5 +50,5 @@ public class OptionController {
         List<Option> list = optionService.findAll();
         PageInfo pageInfo = new PageInfo(list);
         return ResultGenerator.genSuccessResult(pageInfo);
-    }
+    }*/
 }

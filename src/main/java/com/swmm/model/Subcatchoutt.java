@@ -4,17 +4,18 @@ import java.math.BigDecimal;
 import java.util.Date;
 import javax.persistence.*;
 
-public class Subcatchout {
+@Table(name = "subcatchout")
+public class Subcatchoutt {
     @Id
     private String uid;
 
    // @Id
     private String subcatch;
 
-   //@Id
+   // @Id
     private Date dt;
 
-    //@Id
+   // @Id
     private String pollutant;
 
     private BigDecimal rainfall;
@@ -36,7 +37,7 @@ public class Subcatchout {
 
     private BigDecimal runoff;
 
-    private String washoff;
+    private BigDecimal washoff;
 
     private BigDecimal qual;
 
@@ -211,14 +212,14 @@ public class Subcatchout {
     /**
      * @return washoff
      */
-    public String getWashoff() {
+    public BigDecimal getWashoff() {
         return washoff;
     }
 
     /**
      * @param washoff
      */
-    public void setWashoff(String washoff) {
+    public void setWashoff(BigDecimal washoff) {
         this.washoff = washoff;
     }
 

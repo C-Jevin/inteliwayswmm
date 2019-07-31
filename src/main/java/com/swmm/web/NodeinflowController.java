@@ -20,7 +20,7 @@ public class NodeinflowController {
     @Resource
     private NodeinflowService nodeinflowService;
 
-    @PostMapping
+    /*@PostMapping
     public Result add(@RequestBody Nodeinflow nodeinflow) {
         nodeinflowService.save(nodeinflow);
         return ResultGenerator.genSuccessResult();
@@ -50,5 +50,5 @@ public class NodeinflowController {
         List<Nodeinflow> list = nodeinflowService.findAll();
         PageInfo pageInfo = new PageInfo(list);
         return ResultGenerator.genSuccessResult(pageInfo);
-    }
+    }*/
 }

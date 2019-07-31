@@ -1,0 +1,219 @@
+= InteliwaySwmm项目
+
+
+[[_overview]]
+== 概览
+InteliwaySwmm API
+
+
+=== 版本信息
+[%hardbreaks]
+__版本__ : 1.0
+
+
+=== 联系方式
+[%hardbreaks]
+__名字__ : InteliwaySwmm在线接口说明文档
+
+
+=== URI scheme
+[%hardbreaks]
+__域名__ : localhost:8081
+__基础路径__ : /
+
+
+=== 标签
+
+* linkout-controller : LinkOut 结果操作API
+
+
+
+
+[[_paths]]
+== 资源
+
+[[_linkout-controller_resource]]
+=== Linkout-controller
+LinkOut 结果操作API
+
+
+[[_listusingget]]
+==== 分页查询linkout的结果
+....
+GET /swmm/linkout
+....
+
+
+===== 说明
+分页查询linkout的结果（page和size都为0时，默认查询所有记录。）
+
+
+===== 参数
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a,.^2a"]
+|===
+|类型|名称|说明|类型|默认值
+|**Query**|**当前页码** +
+__可选__|当前页码|integer (int32)|`1`
+|**Query**|**每页条数** +
+__可选__|每页条数|integer (int32)|`10`
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 生成
+
+* `\*/*`
+* `application/json`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/swmm/linkout
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "message" : "string"
+}
+----
+
+
+[[_searchbyconditionusingpost]]
+==== 根据字段link,dt,pollutant,查询相关的记录
+....
+POST /swmm/linkout/detailOfLink
+....
+
+
+===== 说明
+如果时间(dt)为空,则根据link,pollutant查询相关记录
+
+
+===== 参数
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|类型|名称|说明|类型
+|**Body**|**LinkOut查询条件** +
+__必填__|传入json格式,如果时间(dt)为空,则根据link,pollutant查询相关记录|<<_linkout,Linkout>>
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|<<_result,Result>>
+|**201**|Created|无内容
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 消耗
+
+* `application/json`
+
+
+===== 生成
+
+* `\*/*`
+* `application/json`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/swmm/linkout/detailOfLink
+----
+
+
+====== 请求 body
+[source,json]
+----
+{
+  "dt" : "2017-01-01 01:00:00",
+  "link" : "tianjia_ZL_update_1",
+  "pollutant" : "TN"
+}
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "message" : "string"
+}
+----
+
+
+
+
+[[_definitions]]
+== 定义
+
+[[_linkout]]
+=== Linkout
+
+[options="header", cols=".^3a,.^11a,.^4a"]
+|===
+|名称|说明|类型
+|**dt** +
+__可选__|时间(2017-01-01 01:00:00) +
+**样例** : `"2017-01-01 01:00:00"`|string (date-time)
+|**link** +
+__必填__|link +
+**样例** : `"tianjia_ZL_update_1"`|string
+|**pollutant** +
+__必填__|污染物(TN,TP,COD,NH4,SS) +
+**样例** : `"TN"`|string
+|===
+
+
+[[_result]]
+=== Result
+
+[options="header", cols=".^3a,.^11a,.^4a"]
+|===
+|名称|说明|类型
+|**code** +
+__可选__|**样例** : `0`|integer (int32)
+|**data** +
+__可选__|**样例** : `"object"`|object
+|**message** +
+__可选__|**样例** : `"string"`|string
+|===
+
+
+
+
+

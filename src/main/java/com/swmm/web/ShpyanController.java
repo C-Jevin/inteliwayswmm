@@ -20,7 +20,7 @@ public class ShpyanController {
     @Resource
     private ShpyanService shpyanService;
 
-    @PostMapping
+    /*@PostMapping
     public Result add(@RequestBody Shpyan shpyan) {
         shpyanService.save(shpyan);
         return ResultGenerator.genSuccessResult();
@@ -50,5 +50,5 @@ public class ShpyanController {
         List<Shpyan> list = shpyanService.findAll();
         PageInfo pageInfo = new PageInfo(list);
         return ResultGenerator.genSuccessResult(pageInfo);
-    }
+    }*/
 }

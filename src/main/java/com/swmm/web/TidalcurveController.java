@@ -20,7 +20,7 @@ public class TidalcurveController {
     @Resource
     private TidalcurveService tidalcurveService;
 
-    @PostMapping
+    /*@PostMapping
     public Result add(@RequestBody Tidalcurve tidalcurve) {
         tidalcurveService.save(tidalcurve);
         return ResultGenerator.genSuccessResult();
@@ -50,5 +50,5 @@ public class TidalcurveController {
         List<Tidalcurve> list = tidalcurveService.findAll();
         PageInfo pageInfo = new PageInfo(list);
         return ResultGenerator.genSuccessResult(pageInfo);
-    }
+    }*/
 }

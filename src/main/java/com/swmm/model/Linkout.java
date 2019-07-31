@@ -1,32 +1,44 @@
 package com.swmm.model;
 
+import io.swagger.annotations.ApiModelProperty;
+
 import java.math.BigDecimal;
 import java.util.Date;
 import javax.persistence.*;
 
 public class Linkout {
     @Id
+    @ApiModelProperty(value = "",required = false,hidden = true)
     private String uid;
 
     //@Id
+    @ApiModelProperty(value = "link",example = "tianjia_ZL_update_1",required = false)
     private String link;
 
     //@Id
+    @ApiModelProperty(value = "时间(2017-01-01 01:00:00)",example = "2017-01-01 01:00:00",required = false)
     private Date dt;
 
     //@Id
+    @ApiModelProperty(notes = "污染物(TN,TP,COD,NH4,SS)",example = "TN",required = true)
     private String pollutant;
 
+    @ApiModelProperty(value = "",required = false,hidden = true)
     private BigDecimal depth;
 
+    @ApiModelProperty(value = "",required = false,hidden = true)
     private BigDecimal flow;
 
+    @ApiModelProperty(value = "",required = false,hidden = true)
     private BigDecimal velocity;
 
+    @ApiModelProperty(value = "",required = false,hidden = true)
     private BigDecimal volume;
 
+    @ApiModelProperty(value = "",required = false,hidden = true)
     private BigDecimal capacity;
 
+    @ApiModelProperty(value = "",required = false,hidden = true)
     private BigDecimal qual;
 
     /**
@@ -61,6 +73,8 @@ public class Linkout {
      * @return dt
      */
     public Date getDt() {
+        if ("".equals(dt))
+            return null;
         return dt;
     }
 

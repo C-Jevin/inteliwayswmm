@@ -20,7 +20,7 @@ public class RatingcurveController {
     @Resource
     private RatingcurveService ratingcurveService;
 
-    @PostMapping
+   /* @PostMapping
     public Result add(@RequestBody Ratingcurve ratingcurve) {
         ratingcurveService.save(ratingcurve);
         return ResultGenerator.genSuccessResult();
@@ -50,5 +50,5 @@ public class RatingcurveController {
         List<Ratingcurve> list = ratingcurveService.findAll();
         PageInfo pageInfo = new PageInfo(list);
         return ResultGenerator.genSuccessResult(pageInfo);
-    }
+    }*/
 }

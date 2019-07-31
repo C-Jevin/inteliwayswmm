@@ -1,6 +1,7 @@
 package com.swmm.core;
 
 import com.alibaba.fastjson.JSON;
+import io.swagger.annotations.ApiModelProperty;
 
 /**
  * 统一API响应结果封装

@@ -20,7 +20,7 @@ public class ShpyongdiController {
     @Resource
     private ShpyongdiService shpyongdiService;
 
-    @PostMapping
+    /*@PostMapping
     public Result add(@RequestBody Shpyongdi shpyongdi) {
         shpyongdiService.save(shpyongdi);
         return ResultGenerator.genSuccessResult();
@@ -50,5 +50,5 @@ public class ShpyongdiController {
         List<Shpyongdi> list = shpyongdiService.findAll();
         PageInfo pageInfo = new PageInfo(list);
         return ResultGenerator.genSuccessResult(pageInfo);
-    }
+    }*/
 }

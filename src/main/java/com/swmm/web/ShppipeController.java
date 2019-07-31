@@ -20,7 +20,7 @@ public class ShppipeController {
     @Resource
     private ShppipeService shppipeService;
 
-    @PostMapping
+    /*@PostMapping
     public Result add(@RequestBody Shppipe shppipe) {
         shppipeService.save(shppipe);
         return ResultGenerator.genSuccessResult();
@@ -50,5 +50,5 @@ public class ShppipeController {
         List<Shppipe> list = shppipeService.findAll();
         PageInfo pageInfo = new PageInfo(list);
         return ResultGenerator.genSuccessResult(pageInfo);
-    }
+    }*/
 }

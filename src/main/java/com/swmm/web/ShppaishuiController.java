@@ -20,7 +20,7 @@ public class ShppaishuiController {
     @Resource
     private ShppaishuiService shppaishuiService;
 
-    @PostMapping
+    /*@PostMapping
     public Result add(@RequestBody Shppaishui shppaishui) {
         shppaishuiService.save(shppaishui);
         return ResultGenerator.genSuccessResult();
@@ -50,5 +50,5 @@ public class ShppaishuiController {
         List<Shppaishui> list = shppaishuiService.findAll();
         PageInfo pageInfo = new PageInfo(list);
         return ResultGenerator.genSuccessResult(pageInfo);
-    }
+    }*/
 }

@@ -38,7 +38,7 @@ public class CodeGenerator {
 
     public static void main(String[] args) {
         //genCode("divisioncurve");
-        genCodeByCustomModelName("tidalcurve","Tidalcurve");
+        genCodeByCustomModelName("subcatchout","Subcatchoutt");
     }
 
     /**
