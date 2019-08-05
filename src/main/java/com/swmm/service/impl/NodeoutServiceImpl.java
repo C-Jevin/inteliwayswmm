@@ -8,6 +8,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
+import java.util.List;
+import java.util.Map;
 
 
 /**
@@ -19,4 +21,13 @@ public class NodeoutServiceImpl extends AbstractService<Nodeout> implements Node
     @Resource
     private NodeoutMapper nodeoutMapper;
 
+    @Override
+    public List<Map> findMaxAndMin() {
+        return nodeoutMapper.findMaxAndMin();
+    }
+
+    @Override
+    public List<Map> findDate() {
+        return nodeoutMapper.findDate();
+    }
 }

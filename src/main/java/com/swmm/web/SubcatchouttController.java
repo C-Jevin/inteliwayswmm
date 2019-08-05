@@ -20,7 +20,7 @@ public class SubcatchouttController {
     @Resource
     private SubcatchouttService subcatchouttService;
 
-    @PostMapping
+    /*@PostMapping
     public Result add(@RequestBody Subcatchoutt subcatchoutt) {
         subcatchouttService.save(subcatchoutt);
         return ResultGenerator.genSuccessResult();
@@ -50,5 +50,5 @@ public class SubcatchouttController {
         List<Subcatchoutt> list = subcatchouttService.findAll();
         PageInfo pageInfo = new PageInfo(list);
         return ResultGenerator.genSuccessResult(pageInfo);
-    }
+    }*/
 }

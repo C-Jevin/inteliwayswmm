@@ -38,7 +38,7 @@ public class RunSwmmExeControlller {
         Process pswmm = null;
         Process ptodb = null;
 
-        /*try {
+        try {
             Runtime rt = Runtime.getRuntime();
             pswmm = rt.exec(cmd);
             this.exeLogPrint(pswmm);
@@ -56,7 +56,7 @@ public class RunSwmmExeControlller {
            // if (pswmm != null){
                 pswmm.destroy();
             //}
-        }*/
+        }
         try {
             Runtime rt = Runtime.getRuntime();
             cmd = "python  {1}\\swmmToDB.py {0} {1}" ;

@@ -8,6 +8,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
+import java.util.List;
+import java.util.Map;
 
 
 /**
@@ -19,4 +21,13 @@ public class SubcatchouttServiceImpl extends AbstractService<Subcatchoutt> imple
     @Resource
     private SubcatchouttMapper subcatchoutMapper;
 
+    @Override
+    public List<Map> findMaxAndMin() {
+        return subcatchoutMapper.findMaxAndMin();
+    }
+
+    @Override
+    public List<Map> findDate() {
+        return subcatchoutMapper.findDate();
+    }
 }

@@ -17,4 +17,12 @@
     <result column="overflow" jdbcType="DECIMAL" property="overflow" />
     <result column="qual" jdbcType="DECIMAL" property="qual" />
   </resultMap>
+
+  <select id="findMaxAndMin" resultType="Map">
+    SELECT max(capacity) as CapaMax, min(capacity) as CapaMin ,pollutant as pollu from nodeout GROUP BY pollutant ;
+  </select>
+
+  <select id="findDate" resultType="Map">
+    SELECT max(dt) as DtMax, min(dt) as DtMin from nodeout ;
+  </select>
 </mapper>
