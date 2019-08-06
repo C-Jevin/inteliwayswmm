@@ -1,6 +1,7 @@
 package com.swmm.configurer;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -145,10 +146,17 @@ public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
         response.setCharacterEncoding("UTF-8");
         response.setHeader("Content-type", "application/json;charset=UTF-8");
         response.setStatus(200);
+        PrintWriter out = null;
         try {
-            response.getWriter().write(JSON.toJSONString(result));
+            out = response.getWriter();
+            out.write(JSON.toJSONString(result));
+            //response.getWriter().write(JSON.toJSONString(result));
         } catch (IOException ex) {
             logger.error(ex.getMessage());
+        }finally {
+            if (out != null) {
+                out.close();
+            }
         }
     }
 
