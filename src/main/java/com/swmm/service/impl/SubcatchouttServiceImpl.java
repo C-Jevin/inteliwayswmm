@@ -23,11 +23,20 @@ public class SubcatchouttServiceImpl extends AbstractService<Subcatchoutt> imple
 
     @Override
     public List<Map> findMaxAndMin() {
-        return subcatchoutMapper.findMaxAndMin();
+        try {
+            if(subcatchoutMapper.findMaxAndMin()==null)
+                throw new Exception("此指标数据为空 !");
+            return subcatchoutMapper.findMaxAndMin();
+        }catch (Exception e){
+            e.printStackTrace();
+            return null;
+        }
     }
 
     @Override
     public List<Map> findDate() {
-        return subcatchoutMapper.findDate();
+        if(subcatchoutMapper.findDate()!=null)
+            return subcatchoutMapper.findDate();
+        else return null;
     }
 }

@@ -19,7 +19,7 @@
   </resultMap>
 
   <select id="findMaxAndMin" resultType="Map">
-    SELECT max(capacity) as CapaMax, min(capacity) as CapaMin ,pollutant as pollu from nodeout GROUP BY pollutant ;
+    SELECT max(depth) as CapaMax, min(depth) as CapaMin ,pollutant as pollu from nodeout GROUP BY pollutant ;
   </select>
 
   <select id="findDate" resultType="Map">

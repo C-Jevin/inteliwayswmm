@@ -23,11 +23,22 @@ public class NodeoutServiceImpl extends AbstractService<Nodeout> implements Node
 
     @Override
     public List<Map> findMaxAndMin() {
-        return nodeoutMapper.findMaxAndMin();
+        try {
+            if(nodeoutMapper.findMaxAndMin()==null)
+                throw new Exception("此指标数据为空!");
+            return nodeoutMapper.findMaxAndMin();
+        }catch (Exception e){
+            e.printStackTrace();
+            return null;
+        }
+
     }
 
     @Override
     public List<Map> findDate() {
-        return nodeoutMapper.findDate();
+        if (nodeoutMapper.findDate().get(0)!=null && nodeoutMapper.findDate().get(1)!=null)
+            return nodeoutMapper.findDate();
+        else return null;
+
     }
 }

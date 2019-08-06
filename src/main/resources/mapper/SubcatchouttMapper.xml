@@ -22,7 +22,7 @@
   </resultMap>
 
   <select id="findMaxAndMin" resultType="Map">
-    SELECT max(capacity) as CapaMax, min(capacity) as CapaMin ,pollutant as pollu from subcatchout GROUP BY pollutant ;
+    SELECT max(rainfall) as CapaMax, min(rainfall) as CapaMin ,pollutant as pollu from subcatchout GROUP BY pollutant ;
   </select>
 
   <select id="findDate" resultType="Map">

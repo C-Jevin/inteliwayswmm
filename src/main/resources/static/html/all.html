@@ -538,6 +538,17 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#_searchbyconditionusingpost">2.1.2. 根据字段link,dt,pollutant,查询相关的记录</a></li>
 </ul>
 </li>
+<li><a href="#_project-info-controller_resource">2.2. Project-info-controller</a>
+<ul class="sectlevel3">
+<li><a href="#_detailofprojectusingget">2.2.1. detailOfProject</a></li>
+</ul>
+</li>
+<li><a href="#_run-swmm-exe-controlller_resource">2.3. Run-swmm-exe-controlller</a>
+<ul class="sectlevel3">
+<li><a href="#_getexeprogressusingget">2.3.1. 查看swmm.exe运行进度</a></li>
+<li><a href="#_mainrunusingget">2.3.2. 调用Swmm.exe</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#_definitions">3. 定义</a>
@@ -581,6 +592,12 @@ table.CodeRay td.code>pre{padding:0}
 <ul>
 <li>
 <p>linkout-controller : LinkOut 结果操作API</p>
+</li>
+<li>
+<p>project-info-controller : 项目概要信息API</p>
+</li>
+<li>
+<p>run-swmm-exe-controlller : 运行swmm.exe API</p>
 </li>
 </ul>
 </div>
@@ -956,6 +973,398 @@ table.CodeRay td.code>pre{padding:0}
 </div>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_project-info-controller_resource">2.2. Project-info-controller</h3>
+<div class="paragraph">
+<p>项目概要信息API</p>
+</div>
+<div class="sect3">
+<h4 id="_detailofprojectusingget">2.2.1. detailOfProject</h4>
+<div class="literalblock">
+<div class="content">
+<pre>GET /swmm/projectInfo</pre>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_参数_3">参数</h5>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 10%;">
+<col style="width: 15%;">
+<col style="width: 45%;">
+<col style="width: 20%;">
+<col style="width: 10%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-middle">类型</th>
+<th class="tableblock halign-left valign-middle">名称</th>
+<th class="tableblock halign-left valign-middle">说明</th>
+<th class="tableblock halign-left valign-middle">类型</th>
+<th class="tableblock halign-left valign-middle">默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-middle"><div><div class="paragraph">
+<p><strong>Query</strong></p>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><div><div class="paragraph">
+<p><strong>tName</strong><br>
+<em>可选</em></p>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><div><div class="paragraph">
+<p>tName</p>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><div><div class="paragraph">
+<p>string</p>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><div><div class="paragraph">
+<p><code>"linkout"</code></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="_响应_3">响应</h5>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 10%;">
+<col style="width: 70%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-middle">HTTP代码</th>
+<th class="tableblock halign-left valign-middle">说明</th>
+<th class="tableblock halign-left valign-middle">类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-middle"><div><div class="paragraph">
+<p><strong>200</strong></p>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><div><div class="paragraph">
+<p>OK</p>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><div><div class="paragraph">
+<p><a href="#_result">Result</a></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div><div class="paragraph">
+<p><strong>401</strong></p>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><div><div class="paragraph">
+<p>Unauthorized</p>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><div><div class="paragraph">
+<p>无内容</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div><div class="paragraph">
+<p><strong>403</strong></p>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><div><div class="paragraph">
+<p>Forbidden</p>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><div><div class="paragraph">
+<p>无内容</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div><div class="paragraph">
+<p><strong>404</strong></p>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><div><div class="paragraph">
+<p>Not Found</p>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><div><div class="paragraph">
+<p>无内容</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="_生成_3">生成</h5>
+<div class="ulist">
+<ul>
+<li>
+<p><code>*/*</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_http请求示例_3">HTTP请求示例</h5>
+<div class="sect5">
+<h6 id="_请求_path_3">请求 path</h6>
+<div class="listingblock">
+<div class="content">
+<pre>/swmm/projectInfo</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_http响应示例_3">HTTP响应示例</h5>
+<div class="sect5">
+<h6 id="_响应_200_3">响应 200</h6>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="json">{
+  <span class="key"><span class="delimiter">&quot;</span><span class="content">code</span><span class="delimiter">&quot;</span></span> : <span class="integer">0</span>,
+  <span class="key"><span class="delimiter">&quot;</span><span class="content">data</span><span class="delimiter">&quot;</span></span> : <span class="string"><span class="delimiter">&quot;</span><span class="content">object</span><span class="delimiter">&quot;</span></span>,
+  <span class="key"><span class="delimiter">&quot;</span><span class="content">message</span><span class="delimiter">&quot;</span></span> : <span class="string"><span class="delimiter">&quot;</span><span class="content">string</span><span class="delimiter">&quot;</span></span>
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_run-swmm-exe-controlller_resource">2.3. Run-swmm-exe-controlller</h3>
+<div class="paragraph">
+<p>运行swmm.exe API</p>
+</div>
+<div class="sect3">
+<h4 id="_getexeprogressusingget">2.3.1. 查看swmm.exe运行进度</h4>
+<div class="literalblock">
+<div class="content">
+<pre>GET /swmm</pre>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_说明_3">说明</h5>
+<div class="paragraph">
+<p>模型运算进度查看</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_响应_4">响应</h5>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 10%;">
+<col style="width: 70%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-middle">HTTP代码</th>
+<th class="tableblock halign-left valign-middle">说明</th>
+<th class="tableblock halign-left valign-middle">类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-middle"><div><div class="paragraph">
+<p><strong>200</strong></p>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><div><div class="paragraph">
+<p>OK</p>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><div><div class="paragraph">
+<p><a href="#_result">Result</a></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div><div class="paragraph">
+<p><strong>401</strong></p>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><div><div class="paragraph">
+<p>Unauthorized</p>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><div><div class="paragraph">
+<p>无内容</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div><div class="paragraph">
+<p><strong>403</strong></p>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><div><div class="paragraph">
+<p>Forbidden</p>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><div><div class="paragraph">
+<p>无内容</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div><div class="paragraph">
+<p><strong>404</strong></p>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><div><div class="paragraph">
+<p>Not Found</p>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><div><div class="paragraph">
+<p>无内容</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="_生成_4">生成</h5>
+<div class="ulist">
+<ul>
+<li>
+<p><code>*/*</code></p>
+</li>
+<li>
+<p><code>application/json</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_http请求示例_4">HTTP请求示例</h5>
+<div class="sect5">
+<h6 id="_请求_path_4">请求 path</h6>
+<div class="listingblock">
+<div class="content">
+<pre>/swmm</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_http响应示例_4">HTTP响应示例</h5>
+<div class="sect5">
+<h6 id="_响应_200_4">响应 200</h6>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="json">{
+  <span class="key"><span class="delimiter">&quot;</span><span class="content">code</span><span class="delimiter">&quot;</span></span> : <span class="integer">0</span>,
+  <span class="key"><span class="delimiter">&quot;</span><span class="content">data</span><span class="delimiter">&quot;</span></span> : <span class="string"><span class="delimiter">&quot;</span><span class="content">object</span><span class="delimiter">&quot;</span></span>,
+  <span class="key"><span class="delimiter">&quot;</span><span class="content">message</span><span class="delimiter">&quot;</span></span> : <span class="string"><span class="delimiter">&quot;</span><span class="content">string</span><span class="delimiter">&quot;</span></span>
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_mainrunusingget">2.3.2. 调用Swmm.exe</h4>
+<div class="literalblock">
+<div class="content">
+<pre>GET /swmm/runswmmexe</pre>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_说明_4">说明</h5>
+<div class="paragraph">
+<p>异步调用exe</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_响应_5">响应</h5>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 10%;">
+<col style="width: 70%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-middle">HTTP代码</th>
+<th class="tableblock halign-left valign-middle">说明</th>
+<th class="tableblock halign-left valign-middle">类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-middle"><div><div class="paragraph">
+<p><strong>200</strong></p>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><div><div class="paragraph">
+<p>OK</p>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><div><div class="paragraph">
+<p><a href="#_result">Result</a></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div><div class="paragraph">
+<p><strong>401</strong></p>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><div><div class="paragraph">
+<p>Unauthorized</p>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><div><div class="paragraph">
+<p>无内容</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div><div class="paragraph">
+<p><strong>403</strong></p>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><div><div class="paragraph">
+<p>Forbidden</p>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><div><div class="paragraph">
+<p>无内容</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div><div class="paragraph">
+<p><strong>404</strong></p>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><div><div class="paragraph">
+<p>Not Found</p>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><div><div class="paragraph">
+<p>无内容</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="_生成_5">生成</h5>
+<div class="ulist">
+<ul>
+<li>
+<p><code>*/*</code></p>
+</li>
+<li>
+<p><code>application/json</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_http请求示例_5">HTTP请求示例</h5>
+<div class="sect5">
+<h6 id="_请求_path_5">请求 path</h6>
+<div class="listingblock">
+<div class="content">
+<pre>/swmm/runswmmexe</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_http响应示例_5">HTTP响应示例</h5>
+<div class="sect5">
+<h6 id="_响应_200_5">响应 200</h6>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="json">{
+  <span class="key"><span class="delimiter">&quot;</span><span class="content">code</span><span class="delimiter">&quot;</span></span> : <span class="integer">0</span>,
+  <span class="key"><span class="delimiter">&quot;</span><span class="content">data</span><span class="delimiter">&quot;</span></span> : <span class="string"><span class="delimiter">&quot;</span><span class="content">object</span><span class="delimiter">&quot;</span></span>,
+  <span class="key"><span class="delimiter">&quot;</span><span class="content">message</span><span class="delimiter">&quot;</span></span> : <span class="string"><span class="delimiter">&quot;</span><span class="content">string</span><span class="delimiter">&quot;</span></span>
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -993,7 +1402,7 @@ table.CodeRay td.code>pre{padding:0}
 <tr>
 <td class="tableblock halign-left valign-middle"><div><div class="paragraph">
 <p><strong>link</strong><br>
-<em>必填</em></p>
+<em>可选</em></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div><div class="paragraph">
 <p>link<br>
@@ -1079,7 +1488,7 @@ table.CodeRay td.code>pre{padding:0}
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-07-25 21:13:49 CST
+Last updated 2019-08-06 21:00:13 CST
 </div>
 </div>
 </body>
