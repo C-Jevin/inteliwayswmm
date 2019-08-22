@@ -13,7 +13,7 @@ import java.util.concurrent.Executor;
 
 @SpringBootApplication
 @EnableAsync
-@MapperScan("com.swmm.dao")
+//@MapperScan("com.swmm.dao")
 public class InteliwaySwmmApplication {
     public static void main(String[] args) {
         SpringApplication.run(InteliwaySwmmApplication.class, args);

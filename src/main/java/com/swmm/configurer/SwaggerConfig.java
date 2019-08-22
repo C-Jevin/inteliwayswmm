@@ -33,7 +33,7 @@ public class SwaggerConfig {
                 //服务条款网址
                 //.termsOfServiceUrl("http://localhost:8081/static/all.html/")
                 .version("1.0")
-                .contact(new Contact("InteliwaySwmm在线接口说明文档", "http://nanjing.innowater.cn:18081/static/html/all.html/",null))
+                .contact(new Contact("InteliwaySwmm在线接口说明文档", "http://nanjing.innowater.cn:18081/html/all.html/",null))
                 //.contact(new Contact("InteliwaySwmm在线接口说明文档", "http://localhost:8081/static/html/all.html/",null))
                 .build();
     }

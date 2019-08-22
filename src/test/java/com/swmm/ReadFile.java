@@ -28,7 +28,7 @@ public class ReadFile {
                 String lineTxt;
                 String[] s;
                 StringBuffer suffix = new StringBuffer();
-                String prefix = "INSERT INTO linkoutm (dt,link,pollutant,depth,flow,velocity,volume,capacity,qual) VALUES ";
+                String prefix = "INSERT INTO linkout (uid,link,dt,pollutant,depth,flow,velocity,volume,capacity,qual) VALUES ";
                 //Objects.requireNonNull(conn).setAutoCommit(false);
                 conn.setAutoCommit(false);
                 // Statement st = conn.createStatement();
@@ -39,7 +39,6 @@ public class ReadFile {
                 long count = 0;
                 Long begin = System.currentTimeMillis();
                 while ((lineTxt = bufferedReader.readLine()) != null) {
-
                     s=lineTxt.split("\t");
                     if(s[0].equals("Date")) continue;
                     //System.out.println(lineTxt);
@@ -47,9 +46,10 @@ public class ReadFile {
                     dt.append(s[0].substring(6)).append("/").append(s[0], 0, 5);
                     //System.out.println(dt);
                     if (i<=10000) {
-                        suffix.append("(").append("\'").append(dt).append(" ").append(s[1]).append("\'").append(", ").append("\'").append(s[2]).append("\'")
-                                .append(", ").append("\'").append(s[3]).append("\'").append(", ").append(s[4]).append(", ").append(s[5])
-                                .append(", ").append(s[6]).append(", ").append(s[7]).append(", ").append(s[8]).append(", ").append(0).append("),");
+                        suffix.append("(").append("\'").append("testUser").append("\'").append(", ").append("\'").append(s[2]).append("\'").append(", ")
+                                .append("\'").append(dt).append(" ").append(s[1]).append("\'").append(", ").append("\'").append(s[3]).append("\'").append(", ")
+                                .append(s[4]).append(", ").append(s[5]).append(", ").append(s[6]).append(", ").append(s[7]).append(", ").append(s[8]).append(", ")
+                                .append(s[9]).append("),");
                         //j++;
                     }
                    // System.out.println(suffix);
@@ -102,15 +102,15 @@ public class ReadFile {
     }
 
     public static void main(String [] args){
-        Connection conn = null ;
+        Connection conn;
         String url = "jdbc:mysql://localhost:3306/test";
         String name = "com.mysql.jdbc.Driver";
         String username = "root";
         String password = "root";
         try {
             Class.forName(name);
-            conn = (Connection) DriverManager.getConnection(url, username, password);
-            String filepath = "D:\\InteliwaySwmmProject\\SwmmModel\\LinkOUT.txt";
+            conn = DriverManager.getConnection(url, username, password);
+            String filepath = "D:\\InteliwaySwmmProject\\SwmmModel\\testUser\\testProject\\LinkOUT.txt";
             ReadFile.readTxtFileAndInsert(filepath,conn);
         }catch (Exception e){
             e.printStackTrace();

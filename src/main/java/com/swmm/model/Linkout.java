@@ -4,9 +4,11 @@ import io.swagger.annotations.ApiModelProperty;
 
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.TimeZone;
 import javax.persistence.*;
 
 public class Linkout {
+
     @Id
     @ApiModelProperty(value = "",required = false,hidden = true)
     private String uid;
@@ -73,6 +75,8 @@ public class Linkout {
      * @return dt
      */
     public Date getDt() {
+        //TimeZone tz = TimeZone.getTimeZone("ETC/GMT-8");
+        //TimeZone.setDefault(tz);
         if ("".equals(dt))
             return null;
         return dt;
@@ -82,6 +86,8 @@ public class Linkout {
      * @param dt
      */
     public void setDt(Date dt) {
+        //TimeZone tz = TimeZone.getTimeZone("ETC/GMT-8");
+        //TimeZone.setDefault(tz);
         this.dt = dt;
     }
 

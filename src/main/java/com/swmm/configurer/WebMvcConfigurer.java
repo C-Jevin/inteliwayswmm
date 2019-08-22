@@ -50,11 +50,10 @@ public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/static/**")
+        registry.addResourceHandler("/**")
                 .addResourceLocations("classpath:/static/");
         registry.addResourceHandler("swagger-ui.html")
                 .addResourceLocations("classpath:/META-INF/resources/");
-
         registry.addResourceHandler("/webjars/**")
                 .addResourceLocations("classpath:/META-INF/resources/webjars/");
     }
@@ -150,6 +149,7 @@ public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
         try {
             out = response.getWriter();
             out.write(JSON.toJSONString(result));
+            out.flush();
             //response.getWriter().write(JSON.toJSONString(result));
         } catch (IOException ex) {
             logger.error(ex.getMessage());

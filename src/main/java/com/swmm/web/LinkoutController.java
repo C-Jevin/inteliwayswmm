@@ -17,6 +17,7 @@ import tk.mybatis.mapper.entity.Example;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.TimeZone;
 
 /**
 * Created by CodeGenerator on 2019/07/20.
@@ -86,10 +87,6 @@ public class LinkoutController {
     @PostMapping("/detailOfLink")
     public Result searchByCondition(@RequestBody @ApiParam(required = true,name="LinkOut查询条件",value="传入json格式,如果时间(dt)为空,则根据link,pollutant查询相关记录")Linkout linkout){
         try{
-            /*if (linkout.getDt().equals(""))
-                throw new Exception("时间不能为空");*/
-            /*if (linkout.getLink().equals(""))
-                throw new Exception("link不能为空");*/
             if (linkout.getPollutant().equals(""))
                 throw new Exception("污染物类型不能为空");
             /* 将查询条件转化为condition */
@@ -106,6 +103,4 @@ public class LinkoutController {
             return ResultGenerator.genFailResult(e.getMessage());
         }
     }
-
-
 }
